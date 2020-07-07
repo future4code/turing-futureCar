@@ -34,6 +34,13 @@ export const BotaoComprar = styled.button`
   box-shadow: 2px 2px 2px black;
   font-weight: bold;
   font-size: 20px;
+  outline: none;
+  :hover{
+      background-color: #525E7A
+  }
+  :active{
+      background-color: #4A6FC7
+  }
 `
 export const BotaoVender = styled.button`
   margin-left: 20px;
@@ -46,6 +53,13 @@ export const BotaoVender = styled.button`
   box-shadow: 2px 2px 2px black;
   font-weight: bold;
   font-size: 20px;
+  outline: none;
+  :hover{
+    background-color: #7A6E52
+  }
+  :active{
+    background-color: #C7AE71
+  }
 `
 export const Copyright = styled.p`
   bottom: 0;
