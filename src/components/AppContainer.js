@@ -5,8 +5,8 @@ import PaginaHome from './PaginaHome/PaginaHome'
 
 export class AppContainer extends Component {
   state = {
-    home: true,
-    vender: false,
+    home: false,
+    vender: true,
     comprar: false
   }
 
