@@ -1,10 +1,15 @@
 import React, { Component } from 'react'
 import {Pagina, BemVindo, Labe, Car, ImagemLogo, BotaoComprar, BotaoVender, Copyright} from './styles'
 
-
-
-
 export class AppContainer extends Component {
+  state = {
+    mostraHome: true,
+    mostraVender: false,
+    mostraComprar: false
+  }
+
+
+
   render() {
     return (
       <Pagina>
