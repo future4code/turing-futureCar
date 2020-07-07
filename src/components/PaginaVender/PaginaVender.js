@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import {Pagina} from './styles'
+import React from 'react'
+import styled from 'styled-components'
 
-export class AppContainer extends Component {
-  render() {
-    return (
-      <Pagina>
-        Teste
-      </Pagina>
-    )
-  }
+class PaginaVender extends React.Component {
+    render() {
+        return (
+            <div>Pagina Vender</div>
+        )
+    }
 }
+
+export default PaginaVender
