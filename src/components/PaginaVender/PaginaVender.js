@@ -1,5 +1,6 @@
 import React from 'react'
-import {ConteudoInfoVenda, BotaoComprar, HeaderVendas, ConteudoInfo, Vender} from '../PaginaVender/style'
+import {ConteudoInfoVenda, BotaoComprar, HeaderVendas, ConteudoInfo, Vender, BotaoHome} from '../PaginaVender/style'
+import fotoHome from '../output-onlinepngtools.png'
 
 class PaginaVender extends React.Component {
     render() {
@@ -7,6 +8,7 @@ class PaginaVender extends React.Component {
             <ConteudoInfoVenda>
                 <HeaderVendas>
                     <h1>Venda seu carro</h1>
+                    <BotaoHome onClick={this.props.mudaHome} src={fotoHome}></BotaoHome>
                     <BotaoComprar onClick={this.props.mudaComprar}>Quero comprar</BotaoComprar>
                 </HeaderVendas>
                 <ConteudoInfo>

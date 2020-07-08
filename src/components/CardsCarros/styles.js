@@ -15,7 +15,7 @@ export const FotoCarro = styled.img`
   height: 185px;
   transition: transform .5s;
   :hover{
-      transform: scale(3);
+      transform: scale(2);
   }
 `
 export const Titulo = styled.h2`
@@ -41,6 +41,7 @@ export const BotaoComprar = styled.button`
   outline: none;
   background-position: center;
   transition: background .8s;
+  cursor: pointer;
   :hover{
     background: #7388C7 radial-gradient(circle, transparent 1%, #7388C7 1%) center/15000%;
   }

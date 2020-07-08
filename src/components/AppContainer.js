@@ -18,12 +18,16 @@ export class AppContainer extends Component {
     this.setState({home: false, vender: false, comprar: true})
   }
 
+  mudaEstadoHome = () => {
+    this.setState({home: true, vender: false, comprar: false})
+  }
+
   render() {
     const renderizaTela = () => {
       if (this.state.vender === true) {
-        return <PaginaVender mudaComprar={this.mudaEstadoComprar} />
+        return <PaginaVender mudaComprar={this.mudaEstadoComprar} mudaHome={this.mudaEstadoHome}/>
       } else if (this.state.comprar === true) {
-        return <PaginaComprar mudaVender={this.mudaEstadoVender}/>
+        return <PaginaComprar mudaVender={this.mudaEstadoVender} mudaHome={this.mudaEstadoHome}/>
       } else return <PaginaHome mudaComprar={this.mudaEstadoComprar} mudaVender={this.mudaEstadoVender}/>
     }
 

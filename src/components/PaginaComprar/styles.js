@@ -19,7 +19,8 @@ export const HeaderCompras = styled.div`
 `
 export const Titulo = styled.h1`
   font-size: 3em;
-  color: white;      
+  color: white;
+  margin-left: 70px;      
 `
 export const BotaoVender = styled.button`
   height: 50px;
@@ -63,4 +64,14 @@ export const Card = styled.div`
   margin: 15px;
   background-color: white;
   box-shadow: 8px 8px 8px #525E7A;  
+`
+export const BotaoHome = styled.img`
+  height: 50px;
+  width: 50px;
+  margin-right: 20px;
+  background-color: #4A6FC7;
+  background-blend-mode: color;
+  position: relative;
+  left: 15vw;
+  cursor: pointer;
 `

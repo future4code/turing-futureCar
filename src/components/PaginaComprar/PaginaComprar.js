@@ -1,6 +1,7 @@
 import React from 'react'
-import {Global, Pagina, Titulo, BotaoVender, HeaderCompras, Filtrar, Ordenar, FiltroEOrdenar} from './styles'
+import {Global, Pagina, Titulo, BotaoVender, HeaderCompras, Filtrar, Ordenar, FiltroEOrdenar, BotaoHome} from './styles'
 import CardCarro from '../CardsCarros/CardCarro'
+import fotoHome from '../output-onlinepngtools.png'
 
 class PaginaComprar extends React.Component {
     render() {
@@ -9,6 +10,7 @@ class PaginaComprar extends React.Component {
             <Pagina>
                 <HeaderCompras>
                     <Titulo>ENCONTRE SEU CARRO NOVO</Titulo>
+                    <BotaoHome onClick={this.props.mudaHome} src={fotoHome}></BotaoHome>
                     <BotaoVender onClick={this.props.mudaVender}>Quero vender</BotaoVender>
                 </HeaderCompras>
                 <FiltroEOrdenar>
