@@ -24,6 +24,7 @@ export const BotaoComprar = styled.button`
   font-weight: bold;
   font-size: 20px;
   outline: none;
+  cursor: pointer;
   position: relative;
   left: 19vw;
   :hover{

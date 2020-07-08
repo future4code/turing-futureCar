@@ -10,8 +10,8 @@ class PaginaVender extends React.Component {
         name: "",
         description: "",
         price: "",
-        paymentMethod: "x",
-        shipping: "x"
+        paymentMethod: Date.now(),
+        shipping: Date.now()
     }
 
     createCars = () => {
@@ -22,9 +22,11 @@ class PaginaVender extends React.Component {
         paymentMethod: this.state.paymentMethod,
         shipping: this.state.shipping
         }
+
         axios.post(baseUrl, body).then(() => {
         this.setState({name: "", description: "", price: "", paymentMethod: "", shipping: ""})
         alert(`Seu anuncio foi postado com sucesso!`)
+        
         }).catch(error => {
         alert(`Seu anuncio nao foi postado, confira os campos e tente novamente`)
         })
@@ -43,7 +45,7 @@ class PaginaVender extends React.Component {
     }
 
     render() {
-        console.log(this.state.name)
+        console.log(this.state)
         return (
             <ConteudoInfoVenda>
                 <HeaderVendas>

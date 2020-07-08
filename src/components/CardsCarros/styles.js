@@ -4,7 +4,7 @@ export const Card = styled.div`
   width: 300px;
   height: 370px;
   border-radius: 0 0px 0 20px;
-  margin: 15px;
+  margin: 15px 15px 30px 15px;
   background-color: white;
   box-shadow: 8px 8px 8px #525E7A;  
   padding: 0 10px 10px 10px;
@@ -14,6 +14,7 @@ export const FotoCarro = styled.img`
   padding-top: 10px;
   height: 185px;
   transition: transform .5s;
+  cursor: pointer;
   :hover{
       transform: scale(2);
   }
@@ -55,10 +56,4 @@ export const BotaoComprar = styled.button`
 export const Prazo = styled.p`
   margin: 0px;
   font-size: 12px;  
-`
-export const GridCards = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 30px;
-    justify-content: flex-start;
 `
