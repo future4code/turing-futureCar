@@ -61,7 +61,7 @@ export const Card = styled.div`
   width: 300px;
   height: 350px;
   border-radius: 0 20px 0 20px;
-  margin: 15px;
+  margin: 15px 15px 100px 15px;
   background-color: white;
   box-shadow: 8px 8px 8px #525E7A;  
 `
@@ -74,4 +74,11 @@ export const BotaoHome = styled.img`
   position: relative;
   left: 15vw;
   cursor: pointer;
+`
+
+export const GridCards = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px 100px 100px 100px;
+    justify-content: space-between;
 `
