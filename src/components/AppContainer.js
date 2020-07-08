@@ -5,8 +5,8 @@ import PaginaHome from './PaginaHome/PaginaHome'
 
 export class AppContainer extends Component {
   state = {
-    home: false,
-    vender: true,
+    home: true,
+    vender: false,
     comprar: false
   }
 
@@ -21,7 +21,7 @@ export class AppContainer extends Component {
   render() {
     const renderizaTela = () => {
       if (this.state.vender === true) {
-        return <PaginaVender />
+        return <PaginaVender mudaComprar={this.mudaEstadoComprar} />
       } else if (this.state.comprar === true) {
         return <PaginaComprar />
       } else return <PaginaHome mudaComprar={this.mudaEstadoComprar} mudaVender={this.mudaEstadoVender}/>
