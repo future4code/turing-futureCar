@@ -5,9 +5,9 @@ export const ConteudoInfoVenda = styled.div `
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     background: rgb(2,0,36);
+    padding: 100px;
     background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(199,174,113,1) 0%, rgba(199,174,113,1) 35%, rgba(255,255,255,1) 100%);
     > label {
         margin: 10px;
@@ -25,8 +25,7 @@ export const BotaoComprar = styled.button`
   font-size: 20px;
   outline: none;
   position: relative;
-  left: 36vw;
-  top: -15vh;
+  left: 19vw;
   :hover{
       background-color: #7388C7
   }
@@ -37,7 +36,7 @@ export const BotaoComprar = styled.button`
 export const HeaderVendas = styled.div `
         display: flex;
         justify-content: center;
-        margin-left: 100px;
+        margin-left: 180px;
     > h1 {
         color: #fff;
         font-size: 3em;
@@ -59,9 +58,8 @@ export const ConteudoInfo = styled.div `
             padding: 4px;
             border: 2px solid black;
         }
-        }
+      }
 `
-
 export const Vender = styled.button`
   height: 50px;
   width: 200px;
@@ -95,8 +93,7 @@ export const BotaoHome = styled.img`
   height: 50px;
   width: 50px;
   color: #C7AE71;
+  left: 19vw;
   cursor: pointer;
   position: relative;
-  left: 36vw;
-  top: -12vh;
 `
