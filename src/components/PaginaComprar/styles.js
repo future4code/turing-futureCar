@@ -19,7 +19,8 @@ export const HeaderCompras = styled.div`
 `
 export const Titulo = styled.h1`
   font-size: 3em;
-  color: white;      
+  color: white;
+  margin-left: 70px;      
 `
 export const BotaoVender = styled.button`
   height: 50px;
@@ -36,7 +37,7 @@ export const BotaoVender = styled.button`
   left: 15vw;
   cursor: pointer;
   :hover{
-      background-color: #7A6E52
+      background-color: #C5B58D
   }
   :active{
       background-color: #C7AE71
@@ -64,9 +65,13 @@ export const Card = styled.div`
   background-color: white;
   box-shadow: 8px 8px 8px #525E7A;  
 `
-export const GridCards = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 30px;
-    justify-content: flex-start;
+export const BotaoHome = styled.img`
+  height: 50px;
+  width: 50px;
+  margin-right: 20px;
+  background-color: #4A6FC7;
+  background-blend-mode: color;
+  position: relative;
+  left: 15vw;
+  cursor: pointer;
 `
