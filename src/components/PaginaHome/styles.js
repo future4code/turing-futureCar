@@ -1,8 +1,14 @@
 import styled from 'styled-components'
 
+export const Global = styled.div`
+width: 100vw;
+height: 100vh;
+background-image: url("https://i.postimg.cc/NQfhbfXD/Untitled.jpg");
+`
 export const Pagina = styled.div`
   text-align: center;
-  margin: 100px 0 0 0;
+  margin: 0px;
+  padding-top: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,7 +26,7 @@ export const Labe = styled.span`
   margin-top: -30px;
   font-size: 96px;
   font-weight: bold;
-  color: #4A6FC7;
+  color: white;
 `
 export const Car = styled.span`
   margin-top: -30px;
