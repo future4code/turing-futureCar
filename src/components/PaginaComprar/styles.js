@@ -36,7 +36,7 @@ export const BotaoVender = styled.button`
   left: 15vw;
   cursor: pointer;
   :hover{
-      background-color: #7A6E52
+      background-color: #C5B58D
   }
   :active{
       background-color: #C7AE71
@@ -63,10 +63,4 @@ export const Card = styled.div`
   margin: 15px;
   background-color: white;
   box-shadow: 8px 8px 8px #525E7A;  
-`
-export const GridCards = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 30px;
-    justify-content: flex-start;
 `

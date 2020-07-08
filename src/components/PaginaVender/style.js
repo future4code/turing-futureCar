@@ -30,7 +30,7 @@ export const BotaoComprar = styled.button`
   left: 36vw;
   top: -12vh;
   :hover{
-      background-color: #525E7A
+      background-color: #7388C7
   }
   :active{
       background-color: #4A6FC7
