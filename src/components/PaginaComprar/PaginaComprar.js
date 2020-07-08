@@ -1,5 +1,6 @@
 import React from 'react'
-import {Global, Pagina, Titulo, BotaoVender, HeaderCompras, Filtrar, Ordenar, FiltroEOrdenar, Card, GridCards} from './styles'
+import {Global, Pagina, Titulo, BotaoVender, HeaderCompras, Filtrar, Ordenar, FiltroEOrdenar} from './styles'
+import CardCarro from '../CardsCarros/CardCarro'
 
 class PaginaComprar extends React.Component {
     render() {
@@ -8,18 +9,15 @@ class PaginaComprar extends React.Component {
             <Pagina>
                 <HeaderCompras>
                     <Titulo>ENCONTRE SEU CARRO NOVO</Titulo>
-                    <BotaoVender>Quero vender</BotaoVender>
+                    <BotaoVender onClick={this.props.mudaVender}>Quero vender</BotaoVender>
                 </HeaderCompras>
                 <FiltroEOrdenar>
                     <Filtrar placeholder="Filtrar por:" />
                     <Ordenar placeholder="Ordenar por:" />
                 </FiltroEOrdenar>
-                <GridCards>
-                    <Card>Card Carro 1</Card>
-                    <Card>Card Carro 2</Card>
-                    <Card>Card Carro 3</Card>
-                    <Card>Card Carro 4</Card>
-                </GridCards>
+                <div>
+                    <CardCarro />
+                </div>
             </Pagina>
         </Global> 
         )

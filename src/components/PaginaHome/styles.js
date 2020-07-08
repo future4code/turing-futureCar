@@ -49,7 +49,7 @@ export const BotaoComprar = styled.button`
   outline: none;
   cursor: pointer;
   :hover{
-      background-color: #525E7A
+      background-color: #7388C7
   }
   :active{
       background-color: #4A6FC7
@@ -69,7 +69,7 @@ export const BotaoVender = styled.button`
   outline: none;
   cursor: pointer;
   :hover{
-    background-color: #7A6E52
+    background-color: #C5B58D
   }
   :active{
     background-color: #C7AE71
