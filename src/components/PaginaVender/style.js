@@ -14,7 +14,6 @@ export const ConteudoInfoVenda = styled.div `
     }
 `
 export const BotaoComprar = styled.button`
-  margin-right: 20px;
   height: 50px;
   width: 120px;
   border-radius: 20px;
@@ -25,18 +24,19 @@ export const BotaoComprar = styled.button`
   font-weight: bold;
   font-size: 20px;
   outline: none;
-  cursor: pointer;
   position: relative;
-  left: 36vw;
-  top: -12vh;
+  left: 15vw;
   :hover{
-      background-color: #525E7A
+      background-color: #525E7A;
   }
   :active{
-      background-color: #4A6FC7
+      background-color: #4A6FC7;
   }
 `
 export const HeaderVendas = styled.div `
+        display: flex;
+        justify-content: center;
+        margin-left: 100px;
     > h1 {
         color: #fff;
         font-size: 3em;

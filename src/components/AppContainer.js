@@ -23,7 +23,7 @@ export class AppContainer extends Component {
       if (this.state.vender === true) {
         return <PaginaVender mudaComprar={this.mudaEstadoComprar} />
       } else if (this.state.comprar === true) {
-        return <PaginaComprar />
+        return <PaginaComprar mudaVender={this.mudaEstadoVender} />
       } else return <PaginaHome mudaComprar={this.mudaEstadoComprar} mudaVender={this.mudaEstadoVender}/>
     }
 

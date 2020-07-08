@@ -8,7 +8,7 @@ class PaginaComprar extends React.Component {
             <Pagina>
                 <HeaderCompras>
                     <Titulo>ENCONTRE SEU CARRO NOVO</Titulo>
-                    <BotaoVender>Quero vender</BotaoVender>
+                    <BotaoVender onClick={this.props.mudaVender} >Quero vender</BotaoVender>
                 </HeaderCompras>
                 <FiltroEOrdenar>
                     <Filtrar placeholder="Filtrar por:" />
