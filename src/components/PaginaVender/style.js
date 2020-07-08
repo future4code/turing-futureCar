@@ -28,7 +28,7 @@ export const BotaoComprar = styled.button`
   cursor: pointer;
   position: relative;
   left: 36vw;
-  top: -12vh;
+  top: -15vh;
   :hover{
       background-color: #7388C7
   }
@@ -81,4 +81,14 @@ export const Vender = styled.button`
   :active{
     background-color: #C7AE71
   }
+`
+export const BotaoHome = styled.img`
+  margin-right: 20px;
+  height: 50px;
+  width: 50px;
+  color: #C7AE71;
+  cursor: pointer;
+  position: relative;
+  left: 36vw;
+  top: -12vh;
 `
