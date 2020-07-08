@@ -73,14 +73,21 @@ export const Vender = styled.button`
   font-weight: bold;
   font-size: 20px;
   outline: none;
+  background-position: center;
+  transition: background .8s;
   cursor: pointer;
   text-align: center;
+  
   margin-top: 5vh;
   :hover{
-    background-color: #7A6E52
+    background-color: #7A6E52;
+    background: #7A6E52 radial-gradient(circle, transparent 1%, #7A6E52 1%) center/15000%;
+
   }
   :active{
-    background-color: #C7AE71
+    background-color: #C7AE71;
+    background-size: 100%;
+    transition: background 0s;
   }
 `
 export const BotaoHome = styled.img`
