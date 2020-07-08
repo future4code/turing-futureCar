@@ -9,8 +9,25 @@ class PaginaVender extends React.Component {
         name: "",
         description: "",
         price: "",
-        email: ""
+        paymentMethod: "x",
+        shipping: "x"
     }
+
+    createCars = () => {
+        const body = {
+        name: this.state.name,
+        description: this.state.description,
+        price: this.state.price,
+        paymentMethod: this.state.paymentMethod,
+        shipping: this.state.shipping
+        }
+        axios.post(baseUrl, body).then(() => {
+        this.setState({name: "", description: "", price: "", paymentMethod: "", shipping: ""})
+        alert(`Seu anuncio foi postado com sucesso!`)
+        }).catch(error => {
+        alert(`Seu anuncio nao foi postado, confira os campos e tente novamente`)
+        })
+      }
 
     onChangeCarro = (event) => {
         this.setState({name: event.target.value})
@@ -40,7 +57,7 @@ class PaginaVender extends React.Component {
                     <h3>E agora sobre você:</h3>
                     <label>Nome: <input type="text" placeholder="seu nome" /></label>
                     <label>Email: <input type="text" placeholder="seu email" /></label>
-                    <Vender>Vender</Vender>
+                    <Vender onClick={() => this.createCars()}>Vender</Vender>
                 </ConteudoInfo>
             </ConteudoInfoVenda>
         )
