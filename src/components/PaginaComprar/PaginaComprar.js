@@ -29,7 +29,6 @@ class PaginaComprar extends React.Component {
 
     onChangeOrdenar = (event) => {
         this.setState({inputOrdenar: event.target.value})
-        
     }
     
     componentDidMount = () => {
@@ -59,8 +58,10 @@ class PaginaComprar extends React.Component {
               })
               break;
             case 'Titulo':
-                  lista = this.state.listaCarros.sort()
-
+                  lista = this.state.listaCarros.sort(function (a, b) {
+                      return a.name, b.name
+              })
+              break;
             default:
               lista = this.state.listaCarros
           }
