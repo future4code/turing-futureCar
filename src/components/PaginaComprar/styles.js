@@ -43,12 +43,22 @@ export const BotaoVender = styled.button`
       background-color: #C7AE71
   }
 `
-export const Filtrar = styled.input`
+export const FiltrarMinimo = styled.input`
   width: 300px;
   height: 35px;
   display: inline-block;
 `
-export const Ordenar = styled.input`
+export const FiltrarMaximo = styled.input`
+  width: 300px;
+  height: 35px;
+  display: inline-block;
+`
+export const Buscar = styled.input`
+  width: 300px;
+  height: 35px;
+  display: inline-block;
+`
+export const Ordenar = styled.select`
   width: 300px;
   height: 35px;
   display: inline-block;
