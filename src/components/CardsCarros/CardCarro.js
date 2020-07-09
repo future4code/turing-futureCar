@@ -1,12 +1,12 @@
 import React from 'react'
-import {Card, FotoCarro, Titulo, Descricao, Preco, BotaoComprar, Prazo, GridCards} from './styles'
+import {Card, FotoCarro, Titulo, Descricao, Preco, BotaoComprar, Prazo} from './styles'
 
 class CardCarro extends React.Component {
     render() {
         return (
         <div>
             <Card>
-                <FotoCarro src="http://lorempixel.com/280/185/transport"></FotoCarro>
+                <FotoCarro src="https://picsum.photos/280/185"></FotoCarro>
                 <Titulo> {this.props.nameCar}</Titulo>
                 <hr />
                 <Descricao>{this.props.description}</Descricao>

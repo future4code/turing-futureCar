@@ -6,7 +6,6 @@ import axios from 'axios'
 
 const baseUrl = "https://us-central1-labenu-apis.cloudfunctions.net/futureCarOne/cars"
 
-
 class PaginaComprar extends React.Component {
     state = {
         listaCarros: [],
@@ -30,29 +29,12 @@ class PaginaComprar extends React.Component {
 
     onChangeOrdenar = (event) => {
         this.setState({inputOrdenar: event.target.value})
-        switch (this.state.inputOrdenar) {
-          case 'Crescente':
-            this.state.listaCarros.map((carro) => {
-                return this.setState({listaCarros: carro.price.sort(function(a, b) {
-                    return b.price - a.price
-                  })})
-            })
-            
-          case 'Decrescente':
-            this.state.listaCarros.map((carro) => {
-                return this.setState({listaCarros: carro.price.sort(function(a, b) {
-                    return a.price - b.price
-                  })})
-            })
-          default:
-            return true
-        }
+        
     }
     
     componentDidMount = () => {
         this.mostraCarros()
     }
-
 
     mostraCarros = () => {
         axios.get(baseUrl).then(response => {
@@ -62,8 +44,28 @@ class PaginaComprar extends React.Component {
         })
     }
 
-
     render() {
+        let lista = this.state.listaCarros || []
+        
+        switch (this.state.inputOrdenar) {
+            case 'Crescente':
+                  lista = this.state.listaCarros.sort(function(a, b) {
+                      return a.price - b.price
+              })
+              break;
+            case 'Decrescente':
+                  lista = this.state.listaCarros.sort(function(a, b) {
+                      return b.price - a.price
+              })
+              break;
+            case 'Titulo':
+                  lista = this.state.listaCarros.sort()
+
+            default:
+              lista = this.state.listaCarros
+          }
+
+        console.log(this.state.listaCarros)
         return (
         <Global>
             <Pagina>
@@ -77,13 +79,13 @@ class PaginaComprar extends React.Component {
                     <FiltrarMaximo type="text" value={this.state.valorMaximo} placeholder="Valor maximo:"  onChange={this.onChangeMaximo}/>
                     <Buscar type="text" value={this.state.buscar} placeholder="Buscar produto"  onChange={this.funcaoBuscar}/>
                     <Ordenar value={this.state.inputOrdenar} onChange={this.onChangeOrdenar}>
-                        <option>Ordenar: Titulo</option>
-                        <option value="Decrescente">Ordenar: Preco decrescente</option>
+                        <option value="Titulo">Ordenar: Titulo</option>
                         <option value="Crescente">Ordenar: Preco crescente</option>
+                        <option value="Decrescente">Ordenar: Preco decrescente</option>
                     </Ordenar>
                 </FiltroEOrdenar>
                 <GridCards>
-                        {this.state.listaCarros.map(car => {
+                        { lista.map(car => {
                             return <CardCarro 
                                 nameCar = {car.name}
                                 description = {car.description}
