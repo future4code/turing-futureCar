@@ -59,12 +59,29 @@ class PaginaComprar extends React.Component {
               break;
             case 'Titulo':
                   lista = this.state.listaCarros.sort(function (a, b) {
-                      return a.name, b.name
+                      return (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0);
               })
               break;
             default:
               lista = this.state.listaCarros
           }
+
+        let itensFiltrados = this.state.listaCarros
+            if(this.state.valorMinimo !== "") {
+            itensFiltrados = itensFiltrados.filter((elemento) => {
+                return parseFloat(elemento.price) >= this.state.valorMinimo ? true : false
+            })
+            }
+            if(this.state.valorMaximo !== "") {
+            itensFiltrados = itensFiltrados.filter((elemento) => {
+                return parseFloat(elemento.price) <= this.state.valorMaximo ? true : false
+            })
+            }
+            if(this.state.buscar !== "") {
+                itensFiltrados = itensFiltrados.filter((elemento) => {
+                return (elemento.name.toLowerCase().includes(this.state.buscar.toLowerCase()) ? true : false) || (elemento.description.toLowerCase().includes(this.state.buscar.toLowerCase()) ? true : false)
+                })
+            }    
 
         console.log(this.state.listaCarros)
         return (
@@ -76,8 +93,8 @@ class PaginaComprar extends React.Component {
                     <BotaoVender onClick={this.props.mudaVender}>Quero vender</BotaoVender>
                 </HeaderCompras>
                 <FiltroEOrdenar>
-                    <FiltrarMinimo type="text" value={this.state.valorMinimo} placeholder="Valor minimo:" onChange={this.onChangeMinimo}/>
-                    <FiltrarMaximo type="text" value={this.state.valorMaximo} placeholder="Valor maximo:"  onChange={this.onChangeMaximo}/>
+                    <FiltrarMinimo type="text" value={this.state.valorMinimo} placeholder="Valor minimo" onChange={this.onChangeMinimo}/>
+                    <FiltrarMaximo type="text" value={this.state.valorMaximo} placeholder="Valor maximo"  onChange={this.onChangeMaximo}/>
                     <Buscar type="text" value={this.state.buscar} placeholder="Buscar produto"  onChange={this.funcaoBuscar}/>
                     <Ordenar value={this.state.inputOrdenar} onChange={this.onChangeOrdenar}>
                         <option value="Titulo">Ordenar: Titulo</option>
@@ -86,13 +103,13 @@ class PaginaComprar extends React.Component {
                     </Ordenar>
                 </FiltroEOrdenar>
                 <GridCards>
-                        { lista.map(car => {
-                            return <CardCarro 
-                                nameCar = {car.name}
-                                description = {car.description}
-                                price = {car.price}
-                            />
-                        })}
+                {itensFiltrados.map((car) => {
+                    return <CardCarro 
+                    nameCar = {car.name}
+                    description = {car.description}
+                    price = {car.price}
+                    />
+                })}
                 </GridCards>
             </Pagina>
         </Global> 
