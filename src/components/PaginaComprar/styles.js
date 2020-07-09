@@ -44,36 +44,42 @@ export const BotaoVender = styled.button`
   }
 `
 export const FiltrarMinimo = styled.input`
-  width: 300px;
+  width: 150px;
   height: 35px;
   display: inline-block;
+  margin-right: 10px;
+  outline: none;
+  border: none;
+  padding-left: 8px;
 `
 export const FiltrarMaximo = styled.input`
-  width: 300px;
+  width: 150px;
   height: 35px;
   display: inline-block;
+  margin-right: 10px;
+  outline: none;
+  border: none;
+  padding-left: 8px;
 `
 export const Buscar = styled.input`
-  width: 300px;
+  width: 200px;
   height: 35px;
   display: inline-block;
+  outline: none;
+  border: none;
+  padding-left: 8px;
 `
 export const Ordenar = styled.select`
-  width: 300px;
+  width: 200px;
   height: 35px;
   display: inline-block;
   margin-left: 10px;
+  outline: none;
+  border: none;
+  padding-left: 2px;
 `
 export const FiltroEOrdenar = styled.div`
   margin-left: -120px;    
-`
-export const Card = styled.div`
-  width: 300px;
-  height: 350px;
-  border-radius: 0 20px 0 20px;
-  margin: 15px 15px 100px 15px;
-  background-color: white;
-  box-shadow: 8px 8px 8px #525E7A;  
 `
 export const BotaoHome = styled.img`
   height: 50px;
@@ -85,7 +91,6 @@ export const BotaoHome = styled.img`
   left: 15vw;
   cursor: pointer;
 `
-
 export const GridCards = styled.div`
     display: flex;
     flex-wrap: wrap;

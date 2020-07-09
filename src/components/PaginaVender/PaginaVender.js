@@ -55,12 +55,12 @@ class PaginaVender extends React.Component {
                 </HeaderVendas>
                 <ConteudoInfo>
                     <h3>Informe os seguintes dados sobre seu carro:</h3>
-                    <label>Carro: <input type="text" placeholder="marca, modelo e ano" value={this.state.carro} onChange={this.onChangeCarro} /></label>
+                    <label>Carro: <input type="text" placeholder="Marca, modelo e ano" value={this.state.carro} onChange={this.onChangeCarro} /></label>
                     <label>Descrição: <input type="text" placeholder="Cor, estado, opcionais" value={this.state.description} onChange={this.onChangeDescription}  /></label>
-                    <label>Valor: <input type="text" placeholder="preço do seu carro" value={this.state.price} onChange={this.onChangePrice}  /></label>
+                    <label>Valor: <input type="text" placeholder="Preço do carro" value={this.state.price} onChange={this.onChangePrice}  /></label>
                     <h3>E agora sobre você:</h3>
-                    <label>Nome: <input type="text" placeholder="seu nome" /></label>
-                    <label>Email: <input type="text" placeholder="seu email" /></label>
+                    <label>Nome: <input type="text" placeholder="Seu nome" /></label>
+                    <label>Email: <input type="text" placeholder="Seu email" /></label>
                     <Vender onClick={() => this.createCars()}>Vender</Vender>
                 </ConteudoInfo>
             </ConteudoInfoVenda>

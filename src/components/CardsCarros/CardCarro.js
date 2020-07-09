@@ -10,7 +10,7 @@ class CardCarro extends React.Component {
                 <Titulo> {this.props.nameCar}</Titulo>
                 <hr />
                 <Descricao>{this.props.description}</Descricao>
-                <Preco>{this.props.price}</Preco>
+                <Preco>R${this.props.price}</Preco>
                 <BotaoComprar>Comprar</BotaoComprar>
                 <Prazo>Prazo de entrega: 1 semana</Prazo>
             </Card>
