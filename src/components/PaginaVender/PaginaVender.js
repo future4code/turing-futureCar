@@ -79,12 +79,12 @@ class PaginaVender extends React.Component {
                 <ConteudoInfo>
                     <h1>Venda seu carro</h1>
                     <h3>Informe os seguintes dados sobre seu carro:</h3>
-                    <label>Carro:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Marca, modelo e ano" value={this.state.carro} onChange={this.onChangeCarro} /></label>
-                    <label>Descrição: &nbsp;&nbsp;&nbsp;<input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Cor, estado, opcionais" value={this.state.description} onChange={this.onChangeDescription}  /></label>
-                    <label>Valor: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Preço do carro" value={this.state.price} onChange={this.onChangePrice}  /></label>
+                    <label>Carro:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" placeholder="Marca, modelo e ano" value={this.state.carro} onChange={this.onChangeCarro} /></label>
+                    <label>Descrição: &nbsp;&nbsp;&nbsp;<input type="text" placeholder="Cor, estado, opcionais" value={this.state.description} onChange={this.onChangeDescription}  /></label>
+                    <label>Valor: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Preço do carro" value={this.state.price} onChange={this.onChangePrice}  /></label>
                     <h3>E agora sobre você:</h3>
-                    <label>Nome: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Seu nome" /></label>
-                    <label>Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Seu email" /></label>
+                    <label>Nome: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Seu nome" /></label>
+                    <label>Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" placeholder="Seu email" /></label>
                     <Vender onClick={() => this.createCars()}>Vender</Vender>
                 </ConteudoInfo>
             </ConteudoInfoVenda>

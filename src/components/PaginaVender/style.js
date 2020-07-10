@@ -82,11 +82,14 @@ export const ConteudoInfo = styled.div `
             background: none;
             color: #555;
             border-radius: 25px;
-            padding: 10px 5px 10px 5px;
+            padding: 10px 5px 10px 20px;
             box-shadow: inset 5px 5px 5px #cbced1,
                         inset -5px -5px 5px #ffffff;
+                        :hover {
+                          background: #FFFFFF;
+                              }
+                        } 
         }
-      }
 `
 export const Vender = styled.button`
   height: 50px;

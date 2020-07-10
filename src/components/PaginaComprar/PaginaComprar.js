@@ -95,11 +95,11 @@ class PaginaComprar extends React.Component {
                 </HeaderCompras>
                 <FiltroEOrdenar>
                     <MinMax>
-                    <FiltrarMinimo type="text" value={this.state.valorMinimo} placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Valor minimo" onChange={this.onChangeMinimo}/>
-                    <FiltrarMaximo type="text" value={this.state.valorMaximo} placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Valor maximo"  onChange={this.onChangeMaximo}/>
+                    <FiltrarMinimo type="text" value={this.state.valorMinimo} placeholder="Valor minimo" onChange={this.onChangeMinimo}/>
+                    <FiltrarMaximo type="text" value={this.state.valorMaximo} placeholder="Valor maximo"  onChange={this.onChangeMaximo}/>
                     </MinMax>
                     <BuscaSelect>
-                    <Buscar type="text" value={this.state.buscar} placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Buscar produto"  onChange={this.funcaoBuscar}/>
+                    <Buscar type="text" value={this.state.buscar} placeholder="Buscar produto"  onChange={this.funcaoBuscar}/>
                     <Ordenar value={this.state.inputOrdenar} onChange={this.onChangeOrdenar}>
                         <option value="Titulo">Ordenar: Titulo</option>
                         <option value="Crescente">Ordenar: Preco crescente</option>
