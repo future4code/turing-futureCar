@@ -69,7 +69,7 @@ export const ConteudoInfo = styled.div `
     box-shadow: 0px 0px 10px #ffffff;
     opacity: 0.92;
     z-index: 99;
-    overflow: hidden;
+    overflow: auto;
         > label {
             font-size: 1.2em;
             font-weight: 600;
@@ -82,11 +82,14 @@ export const ConteudoInfo = styled.div `
             background: none;
             color: #555;
             border-radius: 25px;
-            padding: 10px 5px 10px 5px;
+            padding: 10px 5px 10px 20px;
             box-shadow: inset 5px 5px 5px #cbced1,
                         inset -5px -5px 5px #ffffff;
+                        :hover {
+                          background: #FFFFFF;
+                              }
+                        } 
         }
-      }
 `
 export const Vender = styled.button`
   height: 50px;

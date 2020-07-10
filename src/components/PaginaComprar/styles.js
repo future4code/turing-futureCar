@@ -1,10 +1,11 @@
 import styled from 'styled-components'
 
 export const Global = styled.div`
-width: 99.98vw;
-height: 100vh;
-background: rgb(2,0,36);
-background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(74,111,199,1) 0%, rgba(74,111,199,1) 35%, rgba(255,255,255,1) 100%);
+  width: 100vw;
+  height: 100vh;
+  padding: 0px 7vw 10vh 7.5vw;
+  background: rgb(2,0,36);
+  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(74,111,199,1) 0%, rgba(74,111,199,1) 35%, rgba(255,255,255,1) 100%);
 `
 export const Pagina = styled.div`
   text-align: center;
@@ -74,7 +75,7 @@ export const FiltrarMinimo = styled.input`
   background: #ecf0f3;
   color: #555;
   border-radius: 25px;
-  padding: 10px 5px 10px 5px;
+  padding: 10px 5px 10px 20px;
   box-shadow: inset 5px 5px 5px #cbced1,
                         inset -5px -5px 5px #ffffff;
 `
@@ -88,7 +89,7 @@ export const FiltrarMaximo = styled.input`
   background: #ecf0f3;
   color: #555;
   border-radius: 25px;
-  padding: 10px 5px 10px 5px;
+  padding: 10px 5px 10px 20px;
   box-shadow: inset 5px 5px 5px #cbced1,
                         inset -5px -5px 5px #ffffff;
 `
@@ -102,7 +103,7 @@ export const Buscar = styled.input`
   background: #ecf0f3;
   color: #555;
   border-radius: 25px;
-  padding: 10px 5px 10px 5px;
+  padding: 10px 5px 10px 20px;
   box-shadow: inset 5px 5px 5px #cbced1,
                         inset -5px -5px 5px #ffffff;
 `
@@ -128,7 +129,6 @@ export const FiltroEOrdenar = styled.div`
 export const GridCards = styled.div`
     display: flex;
     flex-wrap: wrap;
-    margin: 5vh 7vw 10vh 7vw;
     justify-content: space-between;
 `
 export const MinMax = styled.div`
