@@ -1,7 +1,6 @@
 import React from 'react'
-import {Global, Pagina, Titulo, BotaoVender, HeaderCompras, FiltrarMinimo, FiltrarMaximo, Buscar, Ordenar, FiltroEOrdenar, BotaoHome, GridCards} from './styles'
+import {Global, Pagina, Titulo, BotaoVender, HeaderCompras, FiltrarMinimo, FiltrarMaximo, Buscar, Ordenar, FiltroEOrdenar, LabeCar, Labe, Car, GridCards, MinMax, BuscaSelect} from './styles'
 import CardCarro from '../CardsCarros/CardCarro'
-import fotoHome from '../output-onlinepngtools.png';
 import axios from 'axios'
 
 const baseUrl = "https://us-central1-labenu-apis.cloudfunctions.net/futureCarOne/cars"
@@ -89,18 +88,24 @@ class PaginaComprar extends React.Component {
             <Pagina>
                 <HeaderCompras>
                     <Titulo>ENCONTRE SEU CARRO NOVO</Titulo>
-                    <BotaoHome onClick={this.props.mudaHome} src={fotoHome}></BotaoHome>
+                    <LabeCar onClick={this.props.mudaHome}>
+                        <Labe>Labe</Labe><Car>Car</Car>
+                    </LabeCar>
                     <BotaoVender onClick={this.props.mudaVender}>Quero vender</BotaoVender>
                 </HeaderCompras>
                 <FiltroEOrdenar>
-                    <FiltrarMinimo type="text" value={this.state.valorMinimo} placeholder="Valor minimo" onChange={this.onChangeMinimo}/>
-                    <FiltrarMaximo type="text" value={this.state.valorMaximo} placeholder="Valor maximo"  onChange={this.onChangeMaximo}/>
-                    <Buscar type="text" value={this.state.buscar} placeholder="Buscar produto"  onChange={this.funcaoBuscar}/>
+                    <MinMax>
+                    <FiltrarMinimo type="text" value={this.state.valorMinimo} placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Valor minimo" onChange={this.onChangeMinimo}/>
+                    <FiltrarMaximo type="text" value={this.state.valorMaximo} placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Valor maximo"  onChange={this.onChangeMaximo}/>
+                    </MinMax>
+                    <BuscaSelect>
+                    <Buscar type="text" value={this.state.buscar} placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Buscar produto"  onChange={this.funcaoBuscar}/>
                     <Ordenar value={this.state.inputOrdenar} onChange={this.onChangeOrdenar}>
                         <option value="Titulo">Ordenar: Titulo</option>
                         <option value="Crescente">Ordenar: Preco crescente</option>
                         <option value="Decrescente">Ordenar: Preco decrescente</option>
                     </Ordenar>
+                    </BuscaSelect>
                 </FiltroEOrdenar>
                 <GridCards>
                 {itensFiltrados.map((car) => {

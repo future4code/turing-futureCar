@@ -6,12 +6,33 @@ export const ConteudoInfoVenda = styled.div `
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgb(2,0,36);
     padding: 100px;
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(199,174,113,1) 0%, rgba(199,174,113,1) 35%, rgba(255,255,255,1) 100%);
+    background-image: url("https://motorillustrated.com/wp-content/uploads/2019/03/2019-Lincoln-Continental-27.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
     > label {
         margin: 10px;
     }
+`
+export const LabeCar = styled.div`
+  position: fixed;
+  left: 5vw;
+  top: 5vh;
+  cursor: pointer;
+`
+export const Labe = styled.span`
+  font-size: 72px;
+  font-weight: bold;
+  color: white;
+  text-shadow: black 1px 0 32px;
+`
+export const Car = styled.span`
+  font-size: 72px;
+  font-weight: bold;
+  color: #C7AE71;
+  text-shadow: black 1px 0 32px;
 `
 export const BotaoComprar = styled.button`
   height: 50px;
@@ -25,39 +46,45 @@ export const BotaoComprar = styled.button`
   font-size: 20px;
   outline: none;
   cursor: pointer;
-  position: relative;
-  left: 19vw;
+  position: fixed;
+  right: 10vw;
+  top: 10vh;
   :hover{
-      background-color: #7388C7
+      background-color: #7388C7;
   }
   :active{
       background-color: #4A6FC7;
   }
 `
-export const HeaderVendas = styled.div `
-        display: flex;
-        justify-content: center;
-        margin-left: 180px;
-    > h1 {
-        color: #fff;
-        font-size: 3em;
-        text-transform: uppercase;
-        }
-`
 export const ConteudoInfo = styled.div `
     display: flex;
+    border-radius: 20px;
+    width: 32vw;
+    height: 100vh;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     margin-bottom: 8px;
+    background-color: #ecf0f3;
+    box-shadow: 0px 0px 10px #ffffff;
+    opacity: 0.92;
+    z-index: 99;
+    overflow: hidden;
         > label {
             font-size: 1.2em;
-            font-weight: 500;
+            font-weight: 600;
             margin: 4px 64px;
             
         > input {
-            padding: 4px;
-            border: 2px solid black;
+            width: 250px;
+            border: none;
+            outline: none;
+            background: none;
+            color: #555;
+            border-radius: 25px;
+            padding: 10px 5px 10px 5px;
+            box-shadow: inset 5px 5px 5px #cbced1,
+                        inset -5px -5px 5px #ffffff;
         }
       }
 `
@@ -73,10 +100,9 @@ export const Vender = styled.button`
   font-size: 20px;
   outline: none;
   background-position: center;
-  transition: background .8s;
   cursor: pointer;
   text-align: center;
-  
+  margin-bottom: 2vh;
   margin-top: 5vh;
   :hover{
     background-color: #7A6E52;
@@ -89,12 +115,63 @@ export const Vender = styled.button`
     transition: background 0s;
   }
 `
-export const BotaoHome = styled.img`
-  margin-right: 20px;
-  height: 50px;
-  width: 50px;
-  color: #C7AE71;
-  left: 19vw;
-  cursor: pointer;
-  position: relative;
+export const ConfirmaPostado = styled.div`
+  background-color: #2ecc71;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  opacity: 0.8;
+  z-index: 100;
+  transition: 3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    &:hover{
+      opacity: 0;
+      transition: 7s;
+    }
+    &:active{
+      opacity: 0;
+      transition: 7s;
+    }
+    > h1 {
+      font-size: 3em;
+      color: #ffffff;
+    }
+    > h2 {
+      font-size: 3em;
+      color: #ffffff;
+    }
+`
+export const ConfirmaNaoPostado = styled.div`
+  background-color: #e74c3c;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  opacity: 0.8;
+  z-index: 100;
+  transition: 3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    &:hover{
+      opacity: 0;
+      transition: 7s;
+    }
+    &:active{
+      opacity: 0;
+      transition: 7s;
+    }
+    > h1 {
+      font-size: 3em;
+      color: #ffffff;
+    }
+    > h2 {
+      font-size: 3em;
+      color: #ffffff;
+    }
 `

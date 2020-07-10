@@ -1,7 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import {ConteudoInfoVenda, BotaoComprar, HeaderVendas, ConteudoInfo, Vender, BotaoHome} from '../PaginaVender/style'
-import fotoHome from '../output-onlinepngtools.png'
+import {ConteudoInfoVenda, BotaoComprar, ConteudoInfo, Vender, ConfirmaPostado, ConfirmaNaoPostado, LabeCar, Labe, Car} from '../PaginaVender/style'
 
 const baseUrl = "https://us-central1-labenu-apis.cloudfunctions.net/futureCarOne/cars"
 
@@ -11,7 +10,9 @@ class PaginaVender extends React.Component {
         description: "",
         price: "",
         paymentMethod: "Card",
-        shipping: 5
+        shipping: 5,
+        alertaPostado: false,
+        alertaNaoPostado: false
     }
 
     createCars = () => {
@@ -25,10 +26,10 @@ class PaginaVender extends React.Component {
 
         axios.post(baseUrl, body).then(() => {
         this.setState({name: "", description: "", price: "", paymentMethod: "Card", shipping: 5})
-        alert(`Seu anuncio foi postado com sucesso!`)
+        this.setState({alertaPostado: !this.state.alertaPostado})
         
         }).catch(error => {
-        alert(`Seu anuncio nao foi postado, confira os campos e tente novamente`)
+        this.setState({alertaNaoPostado: !this.state.alertaNaoPostado})
         })
       }
 
@@ -43,24 +44,47 @@ class PaginaVender extends React.Component {
     onChangePrice = (event) => {
     this.setState({price: event.target.value})
     }
+    
+    onClickPostado = (event) => {
+    this.setState({alertaPostado: !this.state.alertaPostado})
+    }
+
+    onClickNaoPostado = (event) => {
+    this.setState({alertaNaoPostado: !this.state.alertaNaoPostado})
+    }
+    
 
     render() {
-        console.log(this.state)
+
+        const mostraAlertaPostado = () => {
+            if (this.state.alertaPostado === true) {
+              return <ConfirmaPostado onClick={this.onClickPostado}><h1>Parabéns!</h1><h2>Seu anúncio foi postado com sucesso!</h2></ConfirmaPostado>
+            } else return ""
+          }
+
+        const mostraAlertaNaoPostado = () => {
+            if (this.state.alertaNaoPostado === true) {
+              return <ConfirmaNaoPostado onClick={this.onClickNaoPostado}><h1>Atenção! Seu anúncio não foi postado!</h1><h2>Verifique as informações e tente novamente!</h2></ConfirmaNaoPostado>
+            } else return ""
+          }
+
         return (
             <ConteudoInfoVenda>
-                <HeaderVendas>
-                    <h1>Venda seu carro</h1>
-                    <BotaoHome onClick={this.props.mudaHome} src={fotoHome}></BotaoHome>
+                {mostraAlertaPostado()}
+                {mostraAlertaNaoPostado()}
+                <LabeCar>
+                    <Labe onClick={this.props.mudaHome}>Labe</Labe><Car onClick={this.props.mudaHome}>Car</Car>
                     <BotaoComprar onClick={this.props.mudaComprar}>Quero comprar</BotaoComprar>
-                </HeaderVendas>
+                </LabeCar>
                 <ConteudoInfo>
+                    <h1>Venda seu carro</h1>
                     <h3>Informe os seguintes dados sobre seu carro:</h3>
-                    <label>Carro: <input type="text" placeholder="Marca, modelo e ano" value={this.state.carro} onChange={this.onChangeCarro} /></label>
-                    <label>Descrição: <input type="text" placeholder="Cor, estado, opcionais" value={this.state.description} onChange={this.onChangeDescription}  /></label>
-                    <label>Valor: <input type="text" placeholder="Preço do carro" value={this.state.price} onChange={this.onChangePrice}  /></label>
+                    <label>Carro:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Marca, modelo e ano" value={this.state.carro} onChange={this.onChangeCarro} /></label>
+                    <label>Descrição: &nbsp;&nbsp;&nbsp;<input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Cor, estado, opcionais" value={this.state.description} onChange={this.onChangeDescription}  /></label>
+                    <label>Valor: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Preço do carro" value={this.state.price} onChange={this.onChangePrice}  /></label>
                     <h3>E agora sobre você:</h3>
-                    <label>Nome: <input type="text" placeholder="Seu nome" /></label>
-                    <label>Email: <input type="text" placeholder="Seu email" /></label>
+                    <label>Nome: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Seu nome" /></label>
+                    <label>Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Seu email" /></label>
                     <Vender onClick={() => this.createCars()}>Vender</Vender>
                 </ConteudoInfo>
             </ConteudoInfoVenda>

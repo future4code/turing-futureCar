@@ -16,7 +16,7 @@ export const FotoCarro = styled.img`
   transition: transform .5s;
   cursor: pointer;
   :hover{
-      transform: scale(2);
+      transform: scale(1.4);
   }
 `
 export const Titulo = styled.h2`

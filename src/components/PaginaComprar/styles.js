@@ -1,26 +1,46 @@
 import styled from 'styled-components'
 
 export const Global = styled.div`
-width: 100vw;
+width: 99.98vw;
 height: 100vh;
 background: rgb(2,0,36);
 background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(74,111,199,1) 0%, rgba(74,111,199,1) 35%, rgba(255,255,255,1) 100%);
 `
 export const Pagina = styled.div`
   text-align: center;
-  padding: 100px 0 0 0;
+  padding: 0px 0px 0px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 `
 export const HeaderCompras = styled.div`
-    display: flex;
+  width: 100vw;
 `
 export const Titulo = styled.h1`
-  font-size: 3em;
+  position: relative;
+  top: 12vh;
+  font-size: 2.5em;
   color: white;
-  margin-left: 70px;      
+  text-shadow: black 1px 0 16px; 
+`
+export const LabeCar = styled.div`
+  cursor: pointer;
+  position: relative;
+  top: -10vh;
+  right: 35vw;
+`
+export const Labe = styled.span`
+  font-size: 72px;
+  font-weight: bold;
+  color: white;
+  text-shadow: black 1px 0 32px;
+`
+export const Car = styled.span`
+  font-size: 72px;
+  font-weight: bold;
+  color: #C7AE71;
+  text-shadow: black 1px 0 32px;
 `
 export const BotaoVender = styled.button`
   height: 50px;
@@ -33,9 +53,10 @@ export const BotaoVender = styled.button`
   font-weight: bold;
   font-size: 20px;
   outline: none;
-  position: relative;
-  left: 15vw;
   cursor: pointer;
+  position: relative;
+  top: -18vh;
+  left: 35vw;
   :hover{
       background-color: #C5B58D
   }
@@ -47,53 +68,74 @@ export const FiltrarMinimo = styled.input`
   width: 150px;
   height: 35px;
   display: inline-block;
-  margin-right: 10px;
-  outline: none;
+  margin-left: 2vw;
   border: none;
-  padding-left: 8px;
+  outline: none;
+  background: #ecf0f3;
+  color: #555;
+  border-radius: 25px;
+  padding: 10px 5px 10px 5px;
+  box-shadow: inset 5px 5px 5px #cbced1,
+                        inset -5px -5px 5px #ffffff;
 `
 export const FiltrarMaximo = styled.input`
   width: 150px;
   height: 35px;
   display: inline-block;
-  margin-right: 10px;
-  outline: none;
+  margin-left: 1vw;
   border: none;
-  padding-left: 8px;
+  outline: none;
+  background: #ecf0f3;
+  color: #555;
+  border-radius: 25px;
+  padding: 10px 5px 10px 5px;
+  box-shadow: inset 5px 5px 5px #cbced1,
+                        inset -5px -5px 5px #ffffff;
 `
 export const Buscar = styled.input`
-  width: 200px;
+  width: 250px;
   height: 35px;
   display: inline-block;
-  outline: none;
+  margin-right: 2vw;
   border: none;
-  padding-left: 8px;
+  outline: none;
+  background: #ecf0f3;
+  color: #555;
+  border-radius: 25px;
+  padding: 10px 5px 10px 5px;
+  box-shadow: inset 5px 5px 5px #cbced1,
+                        inset -5px -5px 5px #ffffff;
 `
 export const Ordenar = styled.select`
-  width: 200px;
+  width: 250px;
   height: 35px;
   display: inline-block;
-  margin-left: 10px;
-  outline: none;
+  margin-right: 2vw;
   border: none;
-  padding-left: 2px;
+  outline: none;
+  background: #ecf0f3;
+  color: #555;
+  border-radius: 25px;
+  padding: 10px 5px 10px 5px;
+  box-shadow: inset 5px 5px 5px #cbced1,
+                        inset -5px -5px 5px #ffffff;
 `
 export const FiltroEOrdenar = styled.div`
-  margin-left: -120px;    
-`
-export const BotaoHome = styled.img`
-  height: 50px;
-  width: 50px;
-  margin-right: 20px;
-  background-color: #4A6FC7;
-  background-blend-mode: color;
-  position: relative;
-  left: 15vw;
-  cursor: pointer;
+  width: 88vw;
+  display: flex;
+  justify-content: space-between;
 `
 export const GridCards = styled.div`
     display: flex;
     flex-wrap: wrap;
-    margin: 50px 100px 100px 100px;
+    margin: 5vh 7vw 10vh 7vw;
     justify-content: space-between;
+`
+export const MinMax = styled.div`
+    display: flex;
+    flex-direction: flex-start;
+`
+export const BuscaSelect = styled.div`
+    display: flex;
+    flex-direction: flex-end;
 `
