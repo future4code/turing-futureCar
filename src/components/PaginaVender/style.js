@@ -59,8 +59,8 @@ export const BotaoComprar = styled.button`
 export const ConteudoInfo = styled.div `
     display: flex;
     border-radius: 20px;
-    width: 32vw;
-    height: 100vh;
+    width: 600px;
+    height: 1000px;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
@@ -69,7 +69,7 @@ export const ConteudoInfo = styled.div `
     box-shadow: 0px 0px 10px #ffffff;
     opacity: 0.92;
     z-index: 99;
-    overflow: hidden;
+    overflow: auto;
         > label {
             font-size: 1.2em;
             font-weight: 600;
