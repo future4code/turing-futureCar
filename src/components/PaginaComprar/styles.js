@@ -78,6 +78,9 @@ export const FiltrarMinimo = styled.input`
   padding: 10px 5px 10px 20px;
   box-shadow: inset 5px 5px 5px #cbced1,
                         inset -5px -5px 5px #ffffff;
+                        :hover {
+                          background: #FFFFFF;
+                              }
 `
 export const FiltrarMaximo = styled.input`
   width: 150px;
@@ -92,6 +95,9 @@ export const FiltrarMaximo = styled.input`
   padding: 10px 5px 10px 20px;
   box-shadow: inset 5px 5px 5px #cbced1,
                         inset -5px -5px 5px #ffffff;
+                        :hover {
+                          background: #FFFFFF;
+                              }
 `
 export const Buscar = styled.input`
   width: 250px;
@@ -106,6 +112,9 @@ export const Buscar = styled.input`
   padding: 10px 5px 10px 20px;
   box-shadow: inset 5px 5px 5px #cbced1,
                         inset -5px -5px 5px #ffffff;
+                        :hover {
+                          background: #FFFFFF;
+                              }
 `
 export const Ordenar = styled.select`
   width: 250px;
@@ -120,6 +129,9 @@ export const Ordenar = styled.select`
   padding: 10px 5px 10px 5px;
   box-shadow: inset 5px 5px 5px #cbced1,
                         inset -5px -5px 5px #ffffff;
+                        :hover {
+                          background: #FFFFFF;
+                              }
 `
 export const FiltroEOrdenar = styled.div`
   width: 88vw;
